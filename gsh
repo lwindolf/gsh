@@ -38,7 +38,6 @@ while true; do
                         ;;
                 runner*)
                         read -r x runner <<<$cmd
-                        echo "Runner set to '$runner'."
                         ;;
                 *)
                         if [[ "$cmd" =~ ^[[:space:]]*$ ]]; then
