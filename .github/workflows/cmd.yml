@@ -1,0 +1,17 @@
+# Pipeline to be used with gash
+name: cmd
+
+on:
+  workflow_dispatch:
+    inputs:
+      runner:
+        type: string
+      cmd:
+        type: string
+
+jobs:
+  exec:
+    runs-on: ${{ github.event.inputs.runner }}
+    steps:
+      - name: sh
+        run: ${{ github.event.inputs.cmd }}
